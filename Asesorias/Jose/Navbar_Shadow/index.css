@@ -1,0 +1,22 @@
+img {
+  width: 100%;
+}
+
+.myNav {
+  background-color: #cecece;
+  position: fixed;
+  box-shadow: 0 4px 7px rgba(22, 22, 22, 0);
+  transition: box-shadow .3s ease-in-out;
+}
+
+.myJumbotron {
+  background-image: url('./img/header_background_.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.myShadow {
+  box-shadow: 0 4px 7px rgba(22, 22, 22, 0.4);
+}
