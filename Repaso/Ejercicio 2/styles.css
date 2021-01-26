@@ -1,0 +1,35 @@
+body {
+  color: white;
+}
+
+.header {
+  background-color: rgb(21, 21, 47);
+}
+
+.menu {
+  background-color: salmon;
+}
+
+.menu:hover {
+  background-color: aqua;
+}
+
+.hero {
+  background-color: rgb(51, 51, 170);
+}
+
+.main {
+  background-color: midnightblue;
+}
+
+.banner {
+  background-color: rgb(185, 185, 95);
+}
+
+.extra {
+  background-color: rgb(66, 151, 66);
+}
+
+.image {
+  background-color: rgb(116, 211, 179);
+}
