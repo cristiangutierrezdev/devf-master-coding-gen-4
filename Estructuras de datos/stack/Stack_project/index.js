@@ -1,5 +1,4 @@
 const button_add = document.querySelector('#btn-add-item');
-const list_item = document.querySelector('#list-item');
 const list_wrapper = document.querySelector('#list-wrapper');
 
 let principalArray = [];
@@ -35,15 +34,15 @@ function renderItems() {
 
   for (let index = 0; index < revertContent.length; index++) {
     const liItem = document.createElement('li'); // <li></li>
-    liItem.classList.add('list-item'); // <li classe='list-item'></li>
-    liItem.textContent = revertContent[index].tituloCorreo; // <li classe='list-item'>Correo 2</li>
-    liItem.id = revertContent[index].id; // <li classe='list-item'>Correo 2</li>
+    liItem.classList.add('list-item'); // <li class='list-item'></li>
+    liItem.textContent = revertContent[index].tituloCorreo; // <li class='list-item'>Correo 0.1231234</li>
+    liItem.id = revertContent[index].id; // <li class='list-item' id='0.1231234'>Correo 2 <button class='btn-read'>Marcar como leido</button></li>
 
     const button = document.createElement('button');
     button.classList.add('btn-read');
-    button.textContent = 'Marcar como leido';
-    liItem.appendChild(button);
+    button.textContent = 'Marcar como leido';// <button class='btn-read'>Marcar como leido</button>
 
+    liItem.appendChild(button);
     list_wrapper.appendChild(liItem);
   }
 
