@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(0, 16, 34);
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
+
+.search-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-app__title-wrapper {
+  margin: 0px 0 20px;
+}
+
+.search-app__title {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.search-app__search-wrapper {
+  max-width: 400px;
+}
+
+.search-app__search-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-app__search-label {
+  text-align: center;
+}
+
+.search-app__search-input {
+  margin: 30px 0;
+  padding: 7px 10px;
+}
+
+.search-app__button {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.search-app__button:hover {
+  background-color: #fff;
+  color: rgb(0, 16, 34);
+}
+
+.search-app__champion-wrapper {
+  text-align: center;
+}
+
+.search-app__champion-description {
+  margin-top: 10px;
+}
