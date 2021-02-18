@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <title>Peticiones con Fetch</title>
+  </head>
+  <body>
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">TaskCreator</span>
+      </div>
+    </nav>
+
+    <main class="p-5">
+      <h1>Crea tus tareas facilmente</h1>
+
+      <form class="mt-4" action="">
+        <div class="mb-3">
+          <label for="title-input" class="form-label"
+            >Titulo de la tarea</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="title-input"
+            placeholder="Mi nueva tarea"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description-input" class="form-label"
+            >Descripción de la tarea</label
+          >
+          <textarea
+            class="form-control"
+            id="description-input"
+            rows="3"
+          ></textarea>
+        </div>
+        <button type="button" id='create-buttton' class="btn btn-dark">
+          <span id="button-text">Crear tarea</span>
+          <span id="button-loading-icon" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          <span id="button-loading-text" class="d-none">Creando...</span>
+        </button>
+      </form>
+
+      <hr class="my-5"/>
+
+      <section id="task-wrapper">
+        <!-- <div class="card my-3">
+          <h5 class="card-header">Tarea</h5>
+          <div class="card-body">
+            <h5 class="card-title">Titulo de la tarea</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Terminar tarea</a>
+          </div>
+        </div> -->
+        
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./services.js"></script>
+    <script src="./renderTask.js"></script>
+  </body>
+</html>
