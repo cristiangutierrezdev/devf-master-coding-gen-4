@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.querySelectorAll(".mi-menu__nav-link"),t=document.querySelector(".mi-menu");document.querySelector(".button").addEventListener("click",(function(){t.classList.toggle("mi-menu--bg-green"),e.forEach((e=>{e.classList.toggle("mi-menu--color-white")}))}))})();
