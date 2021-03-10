@@ -6,14 +6,6 @@
   justify-content: center;
 
   &__btn {
-    padding: 8px 20px;
-    background-color: salmon;
-    color: white;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-      background-color: brown;
-    }
+    @include button;
   }
 }
