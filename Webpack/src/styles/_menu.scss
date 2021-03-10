@@ -1,0 +1,37 @@
+/* MENU STYLES */
+.mi-menu {
+  width: 100%;
+  background-color: gray;
+  padding: 20px 30px;
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+
+  &__nav-contenedor {
+    width: 100%;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+  }
+
+  &__nav-list-item {
+    margin: 0 10px;
+  }
+
+  &__nav-link {
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* MODIFICADORES */
+
+  &--bg-green {
+    background-color: green;
+  }
+
+  &--color-white {
+    color: white;
+  }
+}

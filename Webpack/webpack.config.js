@@ -8,17 +8,19 @@ module.exports = {
     filename: 'bundle.js',
   },
 
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
-    ],
-  },
+  mode: 'development',
 
   devServer: {
     port: 5000,
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+    ],
   },
 
   plugins: [
