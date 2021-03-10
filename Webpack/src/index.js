@@ -1,5 +1,5 @@
-import { changeColor } from './metodos';
-import './styles.scss'
+import { changeColor } from './js/metodos';
+import './index.scss'
 
 const button = document.querySelector('.button-wrapper__btn');
 

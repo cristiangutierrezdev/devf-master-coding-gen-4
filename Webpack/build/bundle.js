@@ -10,33 +10,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/styles.scss":
-/*!******************************************************************************************************************!*\
-  !*** ../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/styles.scss ***!
-  \******************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://Webpack/../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/styles.scss?");
-
-/***/ }),
-
-/***/ "../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/app.js":
-/*!*************************************************************************************************************!*\
-  !*** ../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/app.js ***!
-  \*************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _metodos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./metodos */ \"../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/metodos.js\");\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.scss */ \"../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/styles.scss\");\n\r\n\r\n\r\nconst button = document.querySelector('.button-wrapper__btn');\r\n\r\nbutton.addEventListener('click', _metodos__WEBPACK_IMPORTED_MODULE_0__.changeColor);\r\n\n\n//# sourceURL=webpack://Webpack/../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/app.js?");
-
-/***/ }),
-
-/***/ "../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/metodos.js":
+/***/ "../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/index.scss":
 /*!*****************************************************************************************************************!*\
-  !*** ../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/metodos.js ***!
+  !*** ../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/index.scss ***!
   \*****************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"changeColor\": () => (/* binding */ changeColor)\n/* harmony export */ });\nconst links = document.querySelectorAll('.mi-menu__nav-link');\r\nconst menu = document.querySelector('.mi-menu');\r\n\r\nfunction changeColor() {\r\n  menu.classList.toggle('mi-menu--bg-green');\r\n  links.forEach((link)=>{\r\n    link.classList.toggle('mi-menu--color-white');\r\n  })\r\n}\r\n\n\n//# sourceURL=webpack://Webpack/../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/metodos.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://Webpack/../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/index.scss?");
+
+/***/ }),
+
+/***/ "../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/index.js":
+/*!***************************************************************************************************************!*\
+  !*** ../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/index.js ***!
+  \***************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_metodos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/metodos */ \"../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/js/metodos.js\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ \"../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/index.scss\");\n\r\n\r\n\r\nconst button = document.querySelector('.button-wrapper__btn');\r\n\r\nbutton.addEventListener('click', _js_metodos__WEBPACK_IMPORTED_MODULE_0__.changeColor);\r\n\n\n//# sourceURL=webpack://Webpack/../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/index.js?");
+
+/***/ }),
+
+/***/ "../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/js/metodos.js":
+/*!********************************************************************************************************************!*\
+  !*** ../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/js/metodos.js ***!
+  \********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"changeColor\": () => (/* binding */ changeColor)\n/* harmony export */ });\nconst links = document.querySelectorAll('.mi-menu__nav-link');\r\nconst menu = document.querySelector('.mi-menu');\r\n\r\nfunction changeColor() {\r\n  menu.classList.toggle('mi-menu--bg-green');\r\n  links.forEach((link)=>{\r\n    link.classList.toggle('mi-menu--color-white');\r\n  })\r\n}\r\n\n\n//# sourceURL=webpack://Webpack/../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/js/metodos.js?");
 
 /***/ })
 
@@ -99,7 +99,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/app.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("../../../../../../../Documents/dll2.exe/projects/Devf/Master/devf-master-coding-g4/Webpack/src/index.js");
 /******/ 	
 /******/ })()
 ;
