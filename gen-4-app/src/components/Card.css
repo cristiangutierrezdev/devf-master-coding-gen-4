@@ -1,0 +1,11 @@
+.Card {
+  max-width: 330px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 3px 3px 14px rgba(0,0,0, 0.3);
+  color: #000;
+}
+
+.titulo {
+  margin-bottom: 20px;
+}
