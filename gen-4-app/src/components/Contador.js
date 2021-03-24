@@ -17,7 +17,7 @@ function Contador(props) {
 
   useEffect(()=>{
     alert('el numero cambio')
-  }, [])
+  }, [numero])
 
   return (
     <div className='Contador'>

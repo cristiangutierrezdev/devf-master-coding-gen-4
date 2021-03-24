@@ -14,14 +14,14 @@ class Card extends Component {
   componentDidMount(){
     this.setState({...this.state, titulo: 'Cambiado' })
   }
+  
+  // componentDidUpdate(){
+  //   alert('El componente se actualizo')
+  // }
 
   cambiarTitulo = () => {
     this.setState({...this.state, titulo: this.props.titulo})
   }
-
-  // componentDidUpdate(){
-  //   alert('El componente se actualizo')
-  // }
 
   render() {
     return (
