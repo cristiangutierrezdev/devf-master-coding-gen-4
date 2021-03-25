@@ -1,0 +1,31 @@
+.Form {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin: 10px 0;
+  border: 1px solid #cecece;
+}
+
+.btn {
+  padding: 8px 12px;
+  width: 100%;
+  background-color: slateblue;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: #cecece;
+  cursor: not-allowed;
+}

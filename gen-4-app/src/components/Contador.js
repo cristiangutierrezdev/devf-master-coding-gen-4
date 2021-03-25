@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import bandeja from '../img/bandeja.jpg'
 import './Contador.css';
 
 function Contador(props) {
@@ -24,6 +25,8 @@ function Contador(props) {
       <h4>Esto es un contador</h4>
       <p>{numero}</p>
       <button onClick={sumar}>Sumar</button>
+
+      <img src={bandeja} alt=''/>
     </div>
   );
 }
