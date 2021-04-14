@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './Contador.css'
+import './Contador.css';
 
 class Contador extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      numero: 'Loading...',
+      numero: 'Cargando...',
     };
   }
 
@@ -16,25 +16,17 @@ class Contador extends Component {
     });
   };
 
-  componentDidUpdate() {
-    const titulo = document.getElementById('titulo');
-    titulo.className = ''
-
-    if(this.state.numero >= 10 && this.state.numero < 20) {
-      titulo.classList.add('color-blue')
-    } else if (this.state.numero >= 20 && this.state.numero < 30) {
-      titulo.classList.add('color-red')
-    } else {
-      titulo.classList.add('color-orange')
-    }
-  }
-
   componentDidMount() {
     setTimeout(() => {
       this.setState({
         numero: 10,
       });
     }, 3000);
+  }
+
+  componentDidUpdate() {
+    const titulo = document.getElementById('titulo');
+    titulo.classList.toggle('color-orange');
   }
 
   render() {
