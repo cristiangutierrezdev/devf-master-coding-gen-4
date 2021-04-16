@@ -1,6 +1,7 @@
 import './App.css';
 import Contador from './classComponents/Contador';
 import ContadorFuncional from './functionalComponents/ContadorFuncional';
+import ContadorFuncional2 from './functionalComponents/ContadorFuncional2'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
           </Route>
 
           <Route path='/functional'>
-            <ContadorFuncional titulo='Contador Funcional' />
+            <ContadorFuncional2 titulo='Contador Funcional DOS' />
+            {/* <ContadorFuncional titulo='Contador Funcional' /> */}
           </Route>
         </Switch>
       </div>

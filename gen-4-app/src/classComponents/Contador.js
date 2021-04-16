@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Contador.css';
-
 class Contador extends Component {
   constructor(props) {
     super(props);
