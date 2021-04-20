@@ -36,7 +36,7 @@ function ContadorFucional2(props) {
       {typeof numero === 'string' ? (
         ''
       ) : (
-        <button onClick={aumentar}>Aumentar</button>
+        <button onClick={aumentar} >Aumentar</button>
       )}
     </div>
   );

@@ -1,14 +1,43 @@
 import './App.css';
-import Contador from './classComponents/Contador';
-import ContadorFuncional from './functionalComponents/ContadorFuncional';
-import ContadorFuncional2 from './functionalComponents/ContadorFuncional2'
+import React, { useState, useEffect } from 'react';
+import Contador from './components/classComponents/Contador';
+// import ContadorFuncional from './components/functionalComponents/ContadorFuncional';
+import ContadorFuncional2 from './components/functionalComponents/ContadorFuncional2';
+import Card from './components/functionalComponents/Card';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
+  const [countries, setCountries] = useState([]);
+
+  const mostrarPaises = () => {
+    const newCountries = countries.map((pais) => {
+      return (
+        <Card
+          titulo={pais.name}
+          description={pais.capital}
+          button_text='Leer Mas'
+        />
+      );
+    });
+
+    return newCountries;
+  };
+
+  useEffect(() => {
+    const getCountries = () => {
+      fetch('https://restcountries.eu/rest/v2/all')
+        .then((response) => response.json())
+        .then((data) => setCountries(data))
+        .catch((err) => console.log(err));
+    };
+
+    getCountries();
+  }, []);
+
   return (
     <BrowserRouter>
       <div className='App'>
-        <h3>React Router</h3>
+        <h5>React</h5>
         <Switch>
           <Route path='/class'>
             <Contador titulo='Contador Class' />
@@ -18,6 +47,8 @@ function App() {
             <ContadorFuncional2 titulo='Contador Funcional DOS' />
             {/* <ContadorFuncional titulo='Contador Funcional' /> */}
           </Route>
+
+          <Route path='/countries'>{mostrarPaises()}</Route>
         </Switch>
       </div>
     </BrowserRouter>
