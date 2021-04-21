@@ -1,5 +1,6 @@
 .Card-functional {
-  max-width: 330px;
+  width: 330px;
+  margin: 30px 20px;
   padding: 30px;
   background-color: #fff;
   box-shadow: 3px 3px 14px rgba(0,0,0, 0.3);

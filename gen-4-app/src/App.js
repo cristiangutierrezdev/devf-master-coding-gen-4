@@ -37,14 +37,17 @@ function App() {
   return (
     <BrowserRouter>
       <div className='App'>
-        <h5>React</h5>
+        {/* <h5>React</h5> */}
         <Switch>
           <Route path='/class'>
             <Contador titulo='Contador Class' />
           </Route>
 
           <Route path='/functional'>
-            <ContadorFuncional2 titulo='Contador Funcional DOS' />
+            <ContadorFuncional2
+              titulo='Contador Funcional DOS'
+              mostrarPaises={mostrarPaises}
+            />
             {/* <ContadorFuncional titulo='Contador Funcional' /> */}
           </Route>
 
