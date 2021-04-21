@@ -5,33 +5,37 @@ import Contador from './components/classComponents/Contador';
 import ContadorFuncional2 from './components/functionalComponents/ContadorFuncional2';
 import Card from './components/functionalComponents/Card';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CardApi from './components/traerApi/CardApi'
+
 
 function App() {
-  const [countries, setCountries] = useState([]);
+  const [autor, setAutores] = useState([]);
 
-  const mostrarPaises = () => {
-    const newCountries = countries.map((pais) => {
+  const mostrarAutores = () => {
+
+    
+     const newAutores = autor.map((autor) => { 
       return (
-        <Card
-          titulo={pais.name}
-          description={pais.capital}
-          button_text='Leer Mas'
+        <CardApi
+          nombreAutor={autor.author}
+          imagenAutor={autor.download_url}
+          
         />
       );
     });
 
-    return newCountries;
+    return newAutores;
   };
 
   useEffect(() => {
-    const getCountries = () => {
-      fetch('https://restcountries.eu/rest/v2/all')
+    const getAutores = () => {
+      fetch('https://picsum.photos/v2/list')
         .then((response) => response.json())
-        .then((data) => setCountries(data))
+        .then((data) => setAutores(data))
         .catch((err) => console.log(err));
     };
 
-    getCountries();
+    getAutores();
   }, []);
 
   return (
@@ -39,19 +43,7 @@ function App() {
       <div className='App'>
         {/* <h5>React</h5> */}
         <Switch>
-          <Route path='/class'>
-            <Contador titulo='Contador Class' />
-          </Route>
-
-          <Route path='/functional'>
-            <ContadorFuncional2
-              titulo='Contador Funcional DOS'
-              mostrarPaises={mostrarPaises}
-            />
-            {/* <ContadorFuncional titulo='Contador Funcional' /> */}
-          </Route>
-
-          <Route path='/countries'>{mostrarPaises()}</Route>
+          <Route path='/images'> {mostrarAutores()}</Route>
         </Switch>
       </div>
     </BrowserRouter>

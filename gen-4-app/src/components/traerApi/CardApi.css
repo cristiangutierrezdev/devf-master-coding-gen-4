@@ -1,0 +1,18 @@
+.Card-functional {
+  width: 330px;
+  margin: 30px 20px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 3px 3px 14px rgba(0,0,0, 0.3);
+  color: #000;
+  border-radius: 14px;
+}
+
+.titulo {
+  margin-bottom: 20px;
+}
+
+.imagen{
+  width: 120px;
+  height: 80px;
+}
