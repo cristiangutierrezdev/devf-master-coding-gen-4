@@ -1,6 +1,11 @@
+body {
+    text-align: center;
+}
+
 .mainDiv-Card {
     background-color: aliceblue;
-    width: 270px;
+    width: calc(100% / 5);
+    display: inline-block;
     height: 300px;
     border-radius: 20px;
     transition: 0.1s;
@@ -27,6 +32,10 @@
     background-color: aqua;
     padding: 10px;
     margin: 5px;
+}
+
+.p-desc {
+    margin: 0;
 }
 /* hovers */
 
