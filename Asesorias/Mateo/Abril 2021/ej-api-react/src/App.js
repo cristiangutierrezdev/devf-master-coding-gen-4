@@ -10,7 +10,7 @@ function App() {
   const showInfo = () => {
     const cardPart = picsum.map((info) => {
       return(
-        <Card author={info.author} />
+        <Card author={info.author} img={info.download_url} width={info.width} height={info.height}/>
       );
     });
 
@@ -37,7 +37,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path='/images'>
-            {showInfo}
+            {showInfo()}
           </Route>
         </Switch>
       </BrowserRouter>
