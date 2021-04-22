@@ -1,0 +1,15 @@
+@mixin button-primary {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 7px;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  font-family: $font-primary;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}

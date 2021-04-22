@@ -1,0 +1,14 @@
+@mixin titulos-principales {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-family: $font-primary;
+  color: $color-pink;
+  font-weight: 800;
+}
+
+@mixin parrafos {
+  font-size: 14px;
+  font-family: $font-secondary;
+  color: rgb(102, 102, 102);
+  font-weight: 400;
+}

@@ -27,7 +27,7 @@ function ContadorFucional2(props) {
 
   return (
     <div>
-      <h3 id='titulo' className=''>
+      <h3 id='titulo' className='titulo'>
         {props.titulo}
       </h3>
 
