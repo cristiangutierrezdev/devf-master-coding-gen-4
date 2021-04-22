@@ -1,4 +1,7 @@
+body {
+  text-align: center;
+}
+
 .App {
   background-color: rgba(0, 0, 0, 0.609);
 }
-
