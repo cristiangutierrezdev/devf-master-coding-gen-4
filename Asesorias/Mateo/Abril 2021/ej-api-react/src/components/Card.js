@@ -3,8 +3,10 @@ import React from 'react';
 import './Card.scss';
 
 function Card(props) {
+    const asd = () => alert('a')
+
     return (
-        <div className='mainDiv-Card'>
+        <div onClick={asd} className='mainDiv-Card'>
             <div className='Card-title'> 
                 <p className='p-title'> Autor: {props.author} </p> 
             </div>

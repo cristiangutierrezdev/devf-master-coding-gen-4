@@ -6,6 +6,7 @@
     border-radius: 10%;
     transition: 0.1s;
     margin: 20px;
+    cursor: pointer;
 
     .Card-title {
         /* background-color: rgba(213, 235, 255, 0.507); */
@@ -39,10 +40,11 @@
             margin: 0;
         }
     }
+
+    &:hover {
+        transition: 0.3s;
+        transform: scale(1.1);
+        border-radius: 10%;
+    }
 }
 
-.mainDiv-Card:hover {
-    transition: 0.3s;
-    transform: scale(1.1);
-    border-radius: 10%;
-}
