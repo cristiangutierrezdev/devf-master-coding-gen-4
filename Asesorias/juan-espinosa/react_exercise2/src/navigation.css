@@ -1,0 +1,31 @@
+.Profile_Navigation{
+    background-color: rgb(29, 30, 31);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Profile_Navigation--blueBg{
+    background-color: rgba(96, 218, 255, 0.747);
+}
+
+h1{
+    color: rgb(122, 122, 122);
+    display: block;
+    right: 50px;
+    text-align: center;
+}
+
+.navigationBtn{
+    display: block;
+    width: 200px;
+    height: 25px;
+    align-self: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.navigationBtn:hover{
+    cursor: pointer;
+}

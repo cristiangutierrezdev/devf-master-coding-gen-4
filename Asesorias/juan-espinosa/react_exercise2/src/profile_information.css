@@ -1,0 +1,26 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+}
+
+.Profile_information{
+    flex-direction: column;
+}
+
+.Profile_information__user{
+    border-radius: 50%;
+    display: block;
+    height: 300px;
+    width: 300px;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+}
+
+.Profile_information__text{
+    text-align: center;
+    padding: 10px;
+    color: rgb(122, 122, 122);
+}
