@@ -2,5 +2,5 @@ Abril 26, 2021
 
 Ejercicio de Bootstrap: Implentar en las siguiente ruta /bootstrap dos componentes utilizando bootstrap, elije los que quieras, pero uno de ellos debe de poder ser interactuado mediante un boton.
 
-(Estará en ej-api-react)
+(Estará en ej-api-react) 
 
