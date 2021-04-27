@@ -16,6 +16,7 @@ function App() {
           titulo={pais.name}
           description={pais.capital}
           button_text='Leer Mas'
+          progress={25}
         />
       );
     });

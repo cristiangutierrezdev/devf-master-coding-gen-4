@@ -23,4 +23,12 @@
   &__button {
     @include button-primary;
   }
+
+  &__progress {
+    margin: 20px 0;
+  }
+
+  &__progress-bar {
+    width: 25%;
+  }
 }
