@@ -15,7 +15,8 @@ function App() {
         <Card
           titulo={pais.name}
           description={pais.capital}
-          button_text='Leer Mas'
+          button_text='incrementar'
+          button_text_less='Disminuir'
           progress={25}
         />
       );
