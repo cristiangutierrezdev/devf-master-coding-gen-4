@@ -1,0 +1,14 @@
+.footer {
+	color: #000;
+	background-color: #61dafb;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer h4 {
+	margin: 10px 0px;
+	font-size: 20px;
+	font-weight: 500;
+}
