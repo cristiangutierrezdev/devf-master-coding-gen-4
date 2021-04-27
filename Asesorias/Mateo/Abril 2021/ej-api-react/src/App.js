@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 import Card from './components/Card';
+import BootstrapEj from './components/bootstrap-ej/BootstrapEj'
 
 function App() {
   const [picsum, setPicsum] = useState([]);
@@ -38,6 +39,9 @@ function App() {
         <Switch>
           <Route path='/images'>
             {showInfo()}
+          </Route>
+          <Route path='/bootstrap'>
+            <BootstrapEj />
           </Route>
         </Switch>
       </BrowserRouter>
