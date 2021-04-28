@@ -18,6 +18,9 @@ function Navbar() {
 				<li>
 					<Link to='/FetchApi'>FetchAPI</Link>
 				</li>
+				<li>
+					<Link to='/Bootstrap'>Bootstrap</Link>
+				</li>
 			</ul>
 		</div>
 	);

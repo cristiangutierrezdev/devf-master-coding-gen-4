@@ -10,6 +10,7 @@ import Home from './views/Home';
 import ClassComponent from './views/ClassComponent';
 import FunctionalComponent from './views/FunctionalComponent';
 import { FetchApi } from './views/FetchApi';
+import { Bootstrap } from './views/Bootstrap';
 
 function App() {
 	return (
@@ -26,6 +27,9 @@ function App() {
 				</Route>
 				<Route exact path='/FetchApi'>
 					<FetchApi />
+				</Route>
+				<Route exact path='/Bootstrap'>
+					<Bootstrap />
 				</Route>
 				<Redirect push to='/' />
 			</Switch>
