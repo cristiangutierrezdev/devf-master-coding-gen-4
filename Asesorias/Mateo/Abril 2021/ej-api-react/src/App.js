@@ -33,6 +33,8 @@ function App() {
     getAPI()
   }, [])
 
+  
+
   return (
     <div className="App">
       <BrowserRouter>
