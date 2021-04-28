@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './ContadorFuncional.css';
 
 function ContadorFuncional(props) {
   const [numero, setNumero] = useState('Cargando...');

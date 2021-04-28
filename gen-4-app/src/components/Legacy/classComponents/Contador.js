@@ -24,14 +24,14 @@ class Contador extends Component {
   }
 
   componentDidUpdate() {
-    const titulo = document.getElementById('titulo');
+    const titulo = document.getElementById('titulo-class');
     titulo.classList.toggle('color-orange');
   }
 
   render() {
     return (
       <div>
-        <h3 id='titulo' className=''>
+        <h3 id='titulo-class' className=''>
           {this.props.titulo}
         </h3>
 

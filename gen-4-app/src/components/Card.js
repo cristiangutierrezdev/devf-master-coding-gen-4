@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Progress } from 'reactstrap';
+// import { Progress } from 'reactstrap';
 // import './Card.css'
 // import './Card.scss';
 
@@ -23,7 +23,7 @@ function Card(props) {
         <span className='Card-functional--resaltado'>Cualquier cosa</span>
       </div>
 
-    {/*
+    
       <div
         id='Card-functional__progress'
         className='progress Card-functional__progress'>
@@ -35,9 +35,9 @@ function Card(props) {
           aria-valuenow='25'
           aria-valuemin='0'
           aria-valuemax='100'></div>
-      </div> */}
+      </div>
 
-      <Progress value={value} className='Card-functional__progress'/>
+      {/* <Progress value={value} className='Card-functional__progress'/> */}
       <button onClick={aumentar} className='Card-functional__button mr-2'>
         {props.button_text}
       </button>

@@ -1,59 +1,31 @@
-import './App.css';
-import React, { useState, useEffect } from 'react';
-import Contador from './components/classComponents/Contador';
-// import ContadorFuncional from './components/functionalComponents/ContadorFuncional';
-import ContadorFuncional2 from './components/functionalComponents/ContadorFuncional2';
-import Card from './components/functionalComponents/Card';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+// Components
+import Navbar from './components/Navbar'
+
+// Views
+import CountriesView from './Views/CountriesView';
+import ContadoresView from './Views/ContadoresView';
+import ShowComponentView from './Views/ShowComponentView';
+
 function App() {
-  const [countries, setCountries] = useState([]);
-
-  const mostrarPaises = () => {
-    const newCountries = countries.map((pais) => {
-      return (
-        <Card
-          titulo={pais.name}
-          description={pais.capital}
-          button_text='incrementar'
-          button_text_less='Disminuir'
-          progress={25}
-        />
-      );
-    });
-
-    return newCountries;
-  };
-
-  useEffect(() => {
-    const getCountries = () => {
-      fetch('https://restcountries.eu/rest/v2/all')
-        .then((response) => response.json())
-        .then((data) => setCountries(data))
-        .catch((err) => console.log(err));
-    };
-
-    getCountries();
-  }, []);
-
   return (
     <BrowserRouter>
-      <div className='App'>
-        {/* <h5>React</h5> */}
+      <div className='App container-fluid d-flex flex-column p-0'>
+        <Navbar/>
         <Switch>
-          <Route path='/class'>
-            <Contador titulo='Contador Class' />
+          <Route path='/counters'>
+            <ContadoresView />
           </Route>
 
-          <Route path='/functional'>
-            <ContadorFuncional2
-              titulo='Contador Funcional DOS'
-              mostrarPaises={mostrarPaises}
-            />
-            {/* <ContadorFuncional titulo='Contador Funcional' /> */}
+          <Route path='/countries'>
+            <CountriesView />
           </Route>
 
-          <Route path='/countries'>{mostrarPaises()}</Route>
+          <Route path='/show-component'>
+            <ShowComponentView/>
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>

@@ -23,4 +23,6 @@ $margin-standard: 25px;
 
 @import './mixins/buttons';
 @import './mixins/fonts';
-@import './Card';
+@import './components/App';
+@import './components/Card';
+@import './components/ContadorFuncional';
