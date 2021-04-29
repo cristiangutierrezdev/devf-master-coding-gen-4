@@ -38,10 +38,10 @@ function Card(props) {
       </div>
 
       {/* <Progress value={value} className='Card-functional__progress'/> */}
-      <button onClick={aumentar} className='Card-functional__button mr-2'>
+      <button onClick={aumentar} className='Card-functional__button me-2'>
         {props.button_text}
       </button>
-      <button onClick={disminuir} className='Card-functional__button ml-2'>
+      <button onClick={disminuir} className='Card-functional__button ms-2'>
         {props.button_text_less}
       </button>
     </div>
