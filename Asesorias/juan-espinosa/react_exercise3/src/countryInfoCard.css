@@ -1,0 +1,31 @@
+body,
+html{
+    height: 100%;
+    width: 100%;
+}
+
+.countryInfoStyles{
+    display:flex;
+    height: 100%;
+    width: 350%;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    display: block;
+}
+
+.CountryInfoStyles_desc{
+    display: flex;
+}
+
+.CardStyle_img{
+    border-radius: 10px;
+}
+
+.CardStyle_text{
+    font-size: 20px;
+    position: relative;
+    top:17%;
+}

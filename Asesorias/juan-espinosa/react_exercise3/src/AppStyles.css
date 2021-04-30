@@ -1,0 +1,16 @@
+.App{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.AppCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.App__CountryiInfo{
+    display: flex;
+    text-align: center;
+}

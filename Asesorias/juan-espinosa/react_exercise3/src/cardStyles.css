@@ -1,0 +1,62 @@
+*{
+    height: 100%;
+    width: 100%;
+}
+
+.cardStyle{
+    background-color:aliceblue;
+    box-shadow: 10px 10px gray;
+    height: 62%;
+    width: 20%;
+    margin: 2%;
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+h1{
+    font:21px;
+    padding: 0px 2px 0 10px;
+}
+
+p{
+    text-align:left;
+    padding: 15px;
+    width: 95%;
+    position: relative;
+    top: -40px;
+    font-size: 12px;
+}
+
+.cardStyles__Click{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.cardStyle_btn{
+    background-color: rgb(17, 177, 89);
+    color: white;
+    position: relative;
+    display: block;
+    left: 40px;
+    bottom: 50px;
+    width: 200px;
+    height: 350px;
+    font-size:20px;
+    border-radius: 5px;
+}
+
+.cardStyle_btn :hover{
+    cursor: pointer;
+}
+
+.CardStyle_img{
+    height: 40%;
+    width: auto;
+}
+
+
