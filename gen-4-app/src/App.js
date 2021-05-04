@@ -1,9 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-// Components
-import Card from './components/Card';
-
 // Views
 import NavbarView from './Views/NavbarView';
 import CountriesView from './Views/CountriesView';
@@ -15,19 +12,19 @@ function App() {
     <BrowserRouter>
       <div className='App container-fluid d-flex flex-column p-0 '>
         <Switch>
-          <Route path='/counters'>
+          <Route path='/contadores'>
             <NavbarView>
               <ContadoresView />
             </NavbarView>
           </Route>
 
-          <Route path='/countries'>
+          <Route path='/paises'>
             <NavbarView isdashboard={true}>
               <CountriesView />
             </NavbarView>
           </Route>
 
-          <Route path='/show-component'>
+          <Route path='/mostrar-componente'>
             <NavbarView>
               <ShowComponentView />
             </NavbarView>

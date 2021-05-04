@@ -16,7 +16,6 @@ function Footer() {
       <Link
         className='nav-link disabled'
         to='/'
-        tabindex='-1'
         aria-disabled='true'>
         Disabled
       </Link>

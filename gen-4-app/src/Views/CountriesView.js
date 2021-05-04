@@ -2,15 +2,27 @@ import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
 
 // Services
-import { getCountries } from '../services/CountriesServices';
+import { getCountries, getCountriesAsync } from '../services/CountriesServices';
 
 function CountriesView() {
   const [countries, setCountries] = useState([]);
 
+  // useEffect(() => {
+  //   getCountries()
+  //     .then((result) => setCountries(result))
+  //     .catch((err) => console.log(err));
+  // }, []);
+
   useEffect(() => {
-    getCountries()
-      .then((result) => setCountries(result))
-      .catch((err) => console.log(err));
+    const getData = async () => {
+      try {
+        const data = await getCountriesAsync();
+        setCountries(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
   }, []);
 
   const mostrarPaises = () => {

@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function ContadorFucional2(props) {
   const [numero, setNumero] = useState('Cargando...');
+  const titulo = useRef()
+  const num = useRef()
 
   const aumentar = () => {
     setNumero(numero + 1);
@@ -20,18 +22,19 @@ function ContadorFucional2(props) {
   // el useEffect se dispara
   useEffect(() => {
     if (typeof numero === 'number') {
-      const titulo = document.getElementById('titulo');
-      titulo.classList.toggle('color-orange');
+      const tituloElement = titulo.current;
+      tituloElement.classList.toggle('color-orange');
+      num.current.classList.toggle('color-orange');
     }
   }, [numero]);
 
   return (
     <div>
-      <h3 id='titulo' className='titulo'>
+      <h3 className='titulo' ref={titulo}>
         {props.titulo}
       </h3>
 
-      <h5>{numero}</h5>
+      <h5 ref={num}>{numero}</h5>
 
       {typeof numero === 'string' ? (
         ''

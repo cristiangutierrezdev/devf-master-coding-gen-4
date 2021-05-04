@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 function Mensaje() {
+  const mensaje = useRef()
+
   return (
-    <div>
+    <div ref={mensaje}>
       Este es un mensaje
     </div>
   )

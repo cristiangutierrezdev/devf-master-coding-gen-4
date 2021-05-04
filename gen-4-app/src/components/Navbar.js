@@ -6,7 +6,7 @@ function Navbar() {
     <nav className='navbar navbar-expand-lg navbar-light bg-light'>
       <div className='container-fluid'>
         <Link className='navbar-brand' to='/'>
-          Navbar
+          React
         </Link>
         <button
           className='navbar-toggler'
@@ -21,18 +21,18 @@ function Navbar() {
         <div className='collapse navbar-collapse' id='navbarNav'>
           <ul className='navbar-nav'>
             <li className='nav-item'>
-              <Link className='nav-link' to='/countries'>
-                Countries
+              <Link className='nav-link' to='/paises'>
+                Paises
               </Link>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/counters'>
-                Counters
+              <Link className='nav-link' to='/contadores'>
+                Contadores
               </Link>
             </li>
             <li className='nav-item'>
-              <Link className='nav-link' to='/show-component'>
-                Show Components
+              <Link className='nav-link' to='/mostrar-componente'>
+                Mostrar Componente
               </Link>
             </li>
           </ul>
