@@ -9,14 +9,23 @@ import ShowComponentView from './Views/ShowComponentView';
 import HomeView from './Views/HomeView';
 
 function App() {
-  const [auth, setAuth] = useState('');
+  const [auth, setAuth] = useState(false);
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
+
     if (token) {
-      setAuth(token);
+      setAuth(true);
+    } else {
+      setAuth(false);
     }
   }, []);
+
+  const componentePaises = (
+    <NavbarView isdashboard={true}>
+      <CountriesView />
+    </NavbarView>
+  );
 
   return (
     <BrowserRouter>
@@ -29,20 +38,12 @@ function App() {
           </Route>
 
           <Route path='/contadores'>
-            {auth ? (
-              <NavbarView>
-                <ContadoresView />
-              </NavbarView>
-            ) : (
-              <Redirect to='/' />
-            )}
-          </Route>
-
-          <Route path='/paises'>
-            <NavbarView isdashboard={true}>
-              <CountriesView />
+            <NavbarView>
+              <ContadoresView />
             </NavbarView>
           </Route>
+
+          <Route path='/paises'>{auth ? componentePaises : <Redirect to='/'/>}</Route>
 
           <Route path='/mostrar-componente'>
             <NavbarView>
