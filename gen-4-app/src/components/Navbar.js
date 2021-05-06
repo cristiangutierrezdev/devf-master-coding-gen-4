@@ -1,25 +1,27 @@
-import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import { loginService } from '../services/UserService';
 
+// Context
+import { AuthContext } from '../context/AuthContext';
+
 function Navbar() {
-  const browserHistory = useHistory();
+  const { setToken, token } = useContext(AuthContext);
 
   const loginAction = () => {
     const response = loginService('pepito@email.com', '123456');
 
     if (response) {
-      browserHistory.go(0);
+      setToken(response)
     } else {
       alert('Email o contrasenia incorrectos');
     }
   };
 
-  const logoutAction = ()=>{
-    sessionStorage.clear()
-    browserHistory.go(0);
-  }
+  const logoutAction = () => {
+    setToken('')
+  };
 
   return (
     <nav className='navbar navbar-expand-lg navbar-light bg-light'>
@@ -39,7 +41,7 @@ function Navbar() {
         </button>
         <div className='collapse navbar-collapse' id='navbarNav'>
           <ul className='navbar-nav'>
-            {sessionStorage.getItem('token') && (
+            {token && (
               <li className='nav-item'>
                 <Link className='nav-link' to='/paises'>
                   Paises
@@ -60,7 +62,7 @@ function Navbar() {
             </li>
 
             <li className='nav-item'>
-              {sessionStorage.getItem('token') ? (
+              {token ? (
                 <Link className='nav-link' onClick={logoutAction}>
                   Logout
                 </Link>

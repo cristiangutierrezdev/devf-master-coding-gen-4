@@ -6,10 +6,8 @@ const user = {
 export const loginService = (email, password)=>{
   if(user.email === email && user.password === password){
     const token = `${email}.${password}`
-
-    sessionStorage.setItem('token', token)
-    return true
+    return token
   } else {
-    return false
+    return new Error('Correo o Contraseña incorrectos ')
   }
 }

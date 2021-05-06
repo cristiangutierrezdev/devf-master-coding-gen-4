@@ -8,6 +8,9 @@ import ContadoresView from './Views/ContadoresView';
 import ShowComponentView from './Views/ShowComponentView';
 import HomeView from './Views/HomeView';
 
+// Context
+import { AuthProvider } from './context/AuthContext';
+
 function App() {
   const [auth, setAuth] = useState(false);
 
@@ -31,25 +34,29 @@ function App() {
     <BrowserRouter>
       <div className='App container-fluid d-flex flex-column p-0 '>
         <Switch>
-          <Route exact path='/'>
-            <NavbarView>
-              <HomeView />
-            </NavbarView>
-          </Route>
+          <AuthProvider>
+            <Route exact path='/'>
+              <NavbarView>
+                <HomeView />
+              </NavbarView>
+            </Route>
 
-          <Route path='/contadores'>
-            <NavbarView>
-              <ContadoresView />
-            </NavbarView>
-          </Route>
+            <Route path='/contadores'>
+              <NavbarView>
+                <ContadoresView />
+              </NavbarView>
+            </Route>
 
-          <Route path='/paises'>{auth ? componentePaises : <Redirect to='/'/>}</Route>
+            <Route path='/paises'>
+              {auth ? componentePaises : <Redirect to='/' />}
+            </Route>
 
-          <Route path='/mostrar-componente'>
-            <NavbarView>
-              <ShowComponentView />
-            </NavbarView>
-          </Route>
+            <Route path='/mostrar-componente'>
+              <NavbarView>
+                <ShowComponentView />
+              </NavbarView>
+            </Route>
+          </AuthProvider>
         </Switch>
       </div>
     </BrowserRouter>
