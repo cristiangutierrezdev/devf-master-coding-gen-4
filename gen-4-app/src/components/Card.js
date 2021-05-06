@@ -1,19 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 // import { Progress } from 'reactstrap';
 // import './Card.css'
 // import './Card.scss';
 
+import { AuthContext } from '../context/AuthContext';
+
 function Card(props) {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(0);
 
+  const aumentar = () => {
+    setValue(value + 10);
+  };
 
-  const aumentar = ()=>{
-    setValue(value + 10)
-  }
-
-  const disminuir = ()=>{
-    setValue(value - 10)
-  }
+  const disminuir = () => {
+    setValue(value - 10);
+  };
 
   return (
     <div className='Card-functional'>
@@ -22,13 +23,11 @@ function Card(props) {
         {props.description}{' '}
         <span className='Card-functional--resaltado'>Cualquier cosa</span>
       </div>
-
-    
       <div
         id='Card-functional__progress'
         className='progress Card-functional__progress'>
         <div
-          style={{width: value+'%'}}
+          style={{ width: value + '%' }}
           id='Card-functional__progress-bar'
           class='progress-bar Card-functional__progress-bar'
           role='progressbar'
