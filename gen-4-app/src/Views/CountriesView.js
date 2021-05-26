@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Card from '../components/Card';
 
 // Services
 import { getCountries, getCountriesAsync } from '../services/CountriesServices';
 
+// context
+import { CountriesContext } from '../context/CountriesContext';
+
 function CountriesView() {
-  const [countries, setCountries] = useState([]);
+  const [algo, setAlgo] = useState(1);
+  const { countries, setCountries } = useContext(CountriesContext)
 
   // useEffect(() => {
   //   getCountries()
@@ -26,7 +30,7 @@ function CountriesView() {
   }, []);
 
   const mostrarPaises = () => {
-    const newCountries = countries.map((pais) => {
+    const newCountries = countries.map((pais, index) => {
       return (
         <Card
           titulo={pais.name}
@@ -34,6 +38,9 @@ function CountriesView() {
           button_text='incrementar'
           button_text_less='Disminuir'
           progress={25}
+          setAlgo={setAlgo}
+          algo={algo}
+          position={index}
         />
       );
     });

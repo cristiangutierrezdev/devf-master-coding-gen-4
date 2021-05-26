@@ -13,14 +13,14 @@ function Navbar() {
     const response = loginService('pepito@email.com', '123456');
 
     if (response) {
-      setToken(response)
+      setToken(response);
     } else {
       alert('Email o contrasenia incorrectos');
     }
   };
 
   const logoutAction = () => {
-    setToken('')
+    setToken('');
   };
 
   return (

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import { Progress } from 'reactstrap';
 // import './Card.css'
 // import './Card.scss';
+import { Link } from 'react-router-dom';
 
 import { AuthContext } from '../context/AuthContext';
 
@@ -10,6 +11,7 @@ function Card(props) {
 
   const aumentar = () => {
     setValue(value + 10);
+    props.setAlgo(props.algo + 1);
   };
 
   const disminuir = () => {
@@ -35,7 +37,6 @@ function Card(props) {
           aria-valuemin='0'
           aria-valuemax='100'></div>
       </div>
-
       {/* <Progress value={value} className='Card-functional__progress'/> */}
       <button onClick={aumentar} className='Card-functional__button me-2'>
         {props.button_text}
@@ -43,6 +44,7 @@ function Card(props) {
       <button onClick={disminuir} className='Card-functional__button ms-2'>
         {props.button_text_less}
       </button>
+      <Link to={`/paises/${props.position}`}>Ver mas</Link>
     </div>
   );
 }
