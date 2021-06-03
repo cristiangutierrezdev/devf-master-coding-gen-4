@@ -1,0 +1,26 @@
+{
+  "name": "devf-master-coding-g4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3pyp/devf-master-coding-g4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3pyp/devf-master-coding-g4/issues"
+  },
+  "homepage": "https://github.com/3pyp/devf-master-coding-g4#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  }
+}
