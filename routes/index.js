@@ -75,7 +75,7 @@ router.patch('/users/:userid', async (req, res) => {
 // Esto es un delete fisico, debemos evitar hacer este tipo de deletes
 // router.delete('/users/:userid', async (req, res) => {
 //   try {
-//     await User.findByIdAndDelete(req.params.userid);
+//     await User.findByIdAndDelete(req.params.userid, {new: true});
 //     res.status(200).send({ message: 'User was deleted' });
 //   } catch (error) {
 //     res.status(404).send(error);
