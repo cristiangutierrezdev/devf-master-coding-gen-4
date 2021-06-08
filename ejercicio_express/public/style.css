@@ -1,0 +1,16 @@
+h1 {
+	color: darkblue;
+}
+
+body {
+	margin: 0 80px;
+}
+
+li {
+	list-style: upper-roman;
+	margin-top: 1em;
+}
+
+code {
+	font-size: 1.2em;
+}
