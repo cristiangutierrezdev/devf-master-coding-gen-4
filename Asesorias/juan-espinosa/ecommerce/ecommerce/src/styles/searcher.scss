@@ -1,0 +1,129 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+main{
+    position: fixed;
+    width: 100%;
+}
+
+.searcher_nav{
+    list-style-type: none;
+    display: flex;
+    background-color: rgb(0,113,206);
+    width: 100%;
+    align-items: center;
+    margin: 0%;
+
+    &__logo{
+        padding-top: 5px;
+        height: 25px;
+        margin-left: 20px;
+    }
+
+    &__logo:hover{
+        cursor:pointer;
+    }
+
+    &__bar{
+        width: 1050px;
+        height: 38px;
+        margin: 15px;
+        padding-left: 15px;
+        font-size: 15px;
+    }
+    
+    &__bar:focus{
+       outline:none;
+    }
+
+    &__user{
+        color: white;
+        padding-bottom: 7px;
+        margin-top: 7px;
+    }
+    
+    &__arrow{
+        height: 12px;
+        margin: 7px;
+    }
+
+    &__arrow:hover{
+        cursor:pointer;
+    }
+
+    &__cart{
+        height: 25px;
+        padding-left: 10px;
+    }
+
+    &__cart:hover{
+       cursor: pointer;
+    }
+}
+
+.buyer_nav{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 2px -2px gainsboro;
+    background-color: white;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+
+    &__departamentos{
+        color: rgb(249, 121, 23);
+        display: flex;
+        list-style-type: none;
+    }
+
+        &__arrowDep{
+            height: 12px;
+            margin: 5px;
+        }
+
+        &__item{
+            color: rgb(0,113,206);
+            width: 120px;
+            font-size: 15px;
+        }
+
+        &__quincena{
+            color: rgb(0,113,206);
+            width: 200px;
+            font-size: 15px;
+        }
+
+    &__ventasporinternet{
+        display: flex;
+        list-style-type: none;
+    }
+    
+        &__Mismodia{
+            width: 120px;
+            color: rgb(0,113,206);
+        }
+
+        &__Enlinea{
+            width: 120px;
+            color: rgb(249, 121, 23);
+            font-weight: bold;
+        }
+    
+    &__ayuda{
+        display: flex;
+        list-style-type: none;
+    }
+        &__arrowAyuda{
+            height: 8px;
+            margin: 1px 0 0 3px;
+        }
+
+        &__Chat{
+            color: rgb(0,113,206);
+            width: 60px;
+            font-size: 15px;
+        }
+}

@@ -1,0 +1,51 @@
+.tarjetaprod{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 13%;
+    height: 400px;
+    position: relative;
+    top: 10px;
+    margin: 10px 7px 40px 7px;
+    padding: 20px 6px;
+    border: 0.5px ridge rgba(175, 175, 175, 0.2);
+
+    &__ilustracion{
+        width: 130px;
+        align-self: center;
+    }
+
+    &__descripcion{
+        margin: 0px;
+        padding: 10px 0px 0px 0px ;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    &__nombre{
+        color: rgb(0,113,206);
+        font-size: 12px;
+        margin: 0px;
+        padding: 0px 0px 10px 0px ;
+        text-align: left;
+    }
+
+    &__meses{
+        text-align: left;
+        font-size: 13px;
+    }
+
+    &__button{
+        width: 90%;
+        height: 40px;
+        font-size: 95%;
+        font-weight: bold;
+        align-self: center;
+        background-color: white;
+        color: rgb(0,113,206);
+        border: 1px solid rgb(0,113,206);
+        border-radius: 7px;
+        position: absolute;
+        bottom: 20px;
+    }
+}
