@@ -4,7 +4,8 @@ const {
   findById,
   update,
   updateEmail,
-  deleteUser
+  deleteUser,
+  findAllPost
 } = require('../services/userServices');
 
 module.exports = {
@@ -19,6 +20,16 @@ module.exports = {
   getAll: async (_, res) => {
     try {
       const users = await findAll();
+      res.status(200).send(users);
+    } catch (error) {
+      res.status(404).send(error);
+    }
+  },
+  getAllPost: async (req, res) => {
+    const id = req.params.userid;
+    try {
+      console.log(id)
+      const users = await findAllPost(id);
       res.status(200).send(users);
     } catch (error) {
       res.status(404).send(error);

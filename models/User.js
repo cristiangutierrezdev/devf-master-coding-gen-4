@@ -11,12 +11,20 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  posts: {
+    type: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Post',
+      },
+    ],
+  },
   is_active: {
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 });
 
-const User = mongoose.model('User', userSchema)
+const User = mongoose.model('User', userSchema);
 
-module.exports = User
+module.exports = User;

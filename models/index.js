@@ -3,6 +3,7 @@ const MONGO_URI =
   'mongodb+srv://devf:devf2021@cluster0.ufhux.mongodb.net/master-gen-4?retryWrites=true&w=majority';
 
 const User = require('./User');
+const Post = require('./Post')
 
 mongoose.connect(
   MONGO_URI,
@@ -14,4 +15,5 @@ mongoose.connect(
 
 module.exports = {
   User,
+  Post
 };
