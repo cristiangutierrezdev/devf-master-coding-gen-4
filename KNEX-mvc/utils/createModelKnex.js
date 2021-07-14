@@ -1,0 +1,64 @@
+const createModelKnex = (knex, table, returningData, tableId) => {
+
+  const create = (body) => {
+    return knex
+      .insert(body)
+      .returning(returningData)
+      .into(table)
+  };
+
+  const findAll = () => {
+    return knex
+      .select(returningData)
+      .from(table)
+
+  }
+
+  const find = (query) => {
+    return knex.select(returningData)
+      .from(table)
+      .where(query)
+  }
+
+  const findOne = (id) => {
+    return knex
+      .select(returningData)
+      .from(table)
+      .where({ [tableId]: id });
+  }
+
+  const update = (id, bodyToUpdate) => {
+    return knex
+      .update(bodyToUpdate)
+      .from(table)
+      .where({ [tableId]: id })
+      .returning(returningData)
+  }
+
+  const destroy = (id) => {
+    return knex
+      .del()
+      .from(table)
+      .where({ [tableId]: id });
+  }
+
+  const delit = (id) => {
+    return knex
+      .update({ active: false })
+      .from(table)
+      .where({ [tableId]: id })
+  }
+
+  return {
+    create,
+    findAll,
+    findOne,
+    update,
+    destroy,
+    delit,
+    find
+  }
+
+}
+
+module.exports = createModelKnex;

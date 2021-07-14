@@ -1,15 +1,15 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2021-07-13T03:07:21.626Z",
+  "__export_date": "2021-07-14T18:33:04.697Z",
   "__export_source": "insomnia.desktop.app:v2021.4.1",
   "resources": [
     {
       "_id": "req_d781d8eab1aa412f9dd65c98df7be89e",
       "parentId": "wrk_47581bb7c09a425b9e5fccca3062f1ff",
-      "modified": 1626145546413,
+      "modified": 1626287408142,
       "created": 1626145533985,
-      "url": "http://localhost:3600/api/v1/animals/1",
+      "url": "http://localhost:3600/api/v1/animals/23",
       "name": "findOneById",
       "description": "",
       "method": "GET",
@@ -40,15 +40,24 @@
     {
       "_id": "req_6114f2d0ed244f81b7e46c350582d781",
       "parentId": "wrk_47581bb7c09a425b9e5fccca3062f1ff",
-      "modified": 1626145547869,
+      "modified": 1626287375109,
       "created": 1626145533996,
-      "url": "http://localhost:3600/api/v1/animals/1",
+      "url": "http://localhost:3600/api/v1/animals/6",
       "name": "updateOneById",
       "description": "",
       "method": "PATCH",
-      "body": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"en_peligro\": false\n}"
+      },
       "parameters": [],
-      "headers": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8acf39ea3d444b4d91d34bbc14b4196d"
+        }
+      ],
       "authentication": {},
       "metaSortKey": -1000000025,
       "isPrivate": false,
@@ -63,15 +72,24 @@
     {
       "_id": "req_55ac3d21c0fd422fbb470ded4c64e220",
       "parentId": "wrk_47581bb7c09a425b9e5fccca3062f1ff",
-      "modified": 1626145548868,
+      "modified": 1626286775258,
       "created": 1626145534007,
-      "url": "http://localhost:3600/api/v1/animals/1",
+      "url": "http://localhost:3600/api/v1/animals/2",
       "name": "deleteOneById",
       "description": "",
       "method": "DELETE",
-      "body": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": ""
+      },
       "parameters": [],
-      "headers": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8c879ba4a9004cec863798563fe66fd7"
+        }
+      ],
       "authentication": {},
       "metaSortKey": -1000000012.5,
       "isPrivate": false,
@@ -84,9 +102,41 @@
       "_type": "request"
     },
     {
+      "_id": "req_0d332ab89b3840398d94a27a603df1e2",
+      "parentId": "wrk_47581bb7c09a425b9e5fccca3062f1ff",
+      "modified": 1626287254697,
+      "created": 1626286954433,
+      "url": "http://localhost:3600/api/v1/animals/5/destroy",
+      "name": "destroyOneById",
+      "description": "",
+      "method": "DELETE",
+      "body": {
+        "mimeType": "application/json",
+        "text": ""
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8c879ba4a9004cec863798563fe66fd7"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1000000009.375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
       "_id": "req_e2552d25adbb4c548db6abfe1431d6dd",
       "parentId": "wrk_47581bb7c09a425b9e5fccca3062f1ff",
-      "modified": 1626145551699,
+      "modified": 1626280964205,
       "created": 1626145533976,
       "url": "http://localhost:3600/api/v1/animals",
       "name": "findAll",
@@ -109,15 +159,24 @@
     {
       "_id": "req_38e7342c4e4b4b8fbc9cb919516509da",
       "parentId": "wrk_47581bb7c09a425b9e5fccca3062f1ff",
-      "modified": 1626145552814,
+      "modified": 1626287399419,
       "created": 1626145533965,
       "url": "http://localhost:3600/api/v1/animals",
       "name": "create",
       "description": "",
       "method": "POST",
-      "body": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nombre\":\"Mapache\", \n\t\"en_peligro\": false\n}"
+      },
       "parameters": [],
-      "headers": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_62a158d2fb8646cd8f3aa95db033eedb"
+        }
+      ],
       "authentication": {},
       "metaSortKey": -1000000003.125,
       "isPrivate": false,

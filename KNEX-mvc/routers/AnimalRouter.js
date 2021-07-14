@@ -19,6 +19,6 @@ router.patch('/animals/:idAnimal', AnimalController.updateOneById);
 router.delete('/animals/:idAnimal', AnimalController.deleteOneById);
 
 // Destroy One (borrado físico)
-// router.delete('/animals/:idRental/destroy', AnimalController.destroyOneById);
+router.delete('/animals/:idAnimal/destroy', AnimalController.destroyOneById);
 
 module.exports = router;
