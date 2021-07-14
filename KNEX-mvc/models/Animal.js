@@ -1,5 +1,5 @@
 
-const knex = require('../knexfile');
+const knex = require('../config');
 
 const createModelKnex = require('../utils/createModelKnex');
 
