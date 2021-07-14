@@ -1,11 +1,22 @@
-const create = (bodyRental) => {
+
+const { knex } = require('../knex');
+
+const create = (body) => {
   // Acá agregaremos la consulta a la base de datos con knex
-  return true;
+  return knex // retornamos una promesa. 'then' y/o 'catch' será manejados desde el controller.
+    .insert(body)
+    .returning(['id_animal', 'nombre'])
+    .into('animal')
 }
 
-const findAll = () => {
-  // Acá agregaremos la consulta a la base de datos con knex
-  return true;
+const findAll = async () => {
+  try {
+    let result = await knex('animal')
+      .select('*')
+    return result
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 const findOneById = (id) => {

@@ -6,9 +6,19 @@ const create = (req, res) => {
   return res.status(201).json({ message: 'animal created', response })
 }
 
-const findAll = (req, res) => {
-  const response = Animal.findAll();
-  return res.status(200).json({ message: 'all animals', response })
+const findAll = async (req, res) => {
+  const response = await Animal.findAll();
+  try {
+    return res.status(200).json({
+      message: 'All animals',
+      response,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: 'Error obtaining list of animal',
+      error,
+    });
+  }
 }
 
 const findOneById = (req, res) => {
