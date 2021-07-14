@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3600;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/', (req, res) => res.status(200).json({ message: 'Bienvenido 😎' }));
+app.get('/', (req, res) => res.status(200).json({ message: 'Bienvenido 💻' }));
 
 app.use('/api/v1', require('./routers/AnimalRouter'));
 

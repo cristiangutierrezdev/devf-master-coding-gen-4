@@ -1,9 +1,10 @@
 
-const { knex } = require('../knex');
+const knex = require('../knex');
 
-const create = async (body) => {
+const create = async (animalDetail) => {
   try {
-    const result = await knex('animal').insert(body)
+    const result = await knex('animal')
+      .insert(animalDetail);
     return result
   } catch (error) {
     console.log(error)
@@ -13,23 +14,43 @@ const create = async (body) => {
 const findAll = async () => {
   try {
     let result = await knex('animal')
-      .select('*')
+      .select('*');
     return result
   } catch (error) {
     console.log(error)
   }
 }
 
-const findOneById = (id) => {
-  return true;
+const findOneById = async (id) => {
+  try {
+    let result = await knex('animal')
+      .where('id_animal', id);
+    return result
+  } catch (error) {
+    console.log(error)
+  }
 }
 
-const updateOneById = (id, bodyUpdate) => {
-  return true;
+const updateOneById = async (id, animalUpdate) => {
+  try {
+    let result = await knex('animal')
+      .where('id_animal', id)
+      .update(animalUpdate);
+    return result
+  } catch (error) {
+    console.log(error)
+  }
 }
 
-const deleteOneById = (id) => {
-  return true;
+const deleteOneById = async (id) => {
+  try {
+    let result = await knex('animal')
+      .where('id_animal', id)
+      .del();
+    return result
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 module.exports = {

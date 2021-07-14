@@ -8,6 +8,4 @@ const knex = require('knex')({
   }
 });
 
-module.exports = {
-  knex,
-}
+module.exports = knex; // Cómo solamente estamos exportando una variable no son necesarias las {}
