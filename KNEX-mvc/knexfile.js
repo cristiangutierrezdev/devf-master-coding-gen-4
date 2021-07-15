@@ -1,14 +1,24 @@
-module.exports = { 
+module.exports = {
   development: {
     client: 'pg',
     connection: {
-      host: process.env.HOST_PG_DEV,
-      port: process.env.PORT_DEV,
-      database: process.env.DATABASE_PG_DEV,
-      user: process.env.USER_PG_DEV,
-      password: process.env.PASSWORD_PG_DEV,
+      host: 'localhost',
+      port: 5433,
+      database: 'animales_extinsion',
+      user: 'postgres',
+      password: 'postgres',
     },
   },
+  // development: {
+  //   client: 'pg',
+  //   connection: {
+  //     host: `${process.env.HOST_PG_DEV}`,
+  //     port: `${process.env.PORT_DEV}`,
+  //     database: `${process.env.DATABASE_PG_DEV}`,
+  //     user: `${process.env.USER_PG_DEV}`,
+  //     password: `${process.env.PASSWORD_PG_DEV}`,
+  //   },
+  // },
   staging: {
     client: 'pg',
     connection: {
